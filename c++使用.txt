@@ -1,0 +1,86 @@
+基本语法：
+
+常见头函数：
+
+二维数组初始化：vector<vector<int>> a(num,vector<int>(3,2))
+插入 s1.insert(2,s2)
+截取字符串
+删除字符串
+
+判断：
+判断字母：isalpha
+判断数组：isalnum
+判断大写：isupper
+判断小写：islower
+变大写：toupper
+变小写：tolower
+
+位运算：
+与：&
+或：|
+异或：^
+取反：~
+
+math:
+绝对值：abs
+取整 floor向下 ceil向上
+指数 exp
+指数 pow
+平方根sqrt
+
+字符串转数字： 
+数字转字符串: to_string(int_num)
+数字转字符：char s=3+'0' （本质是将'0'转为asci码后加3，然后转成字符串
+
+插入一个匿名vector：a.push_back(vector<int>{1,2,3}}
+String插入字符串：str.insert(2,"haah") （从下标2开始插入）
+
+map遍历 for(map<string,int>::iterator it=m.begin(); it!=m.end(); it++){   m->first  }
+
+sum=sum+1+2;
+sum+=1,sum+=2
+
+typeid(a)==typeid(int)
+typeid(a)==typeid(list<int>)
+
+输入一行字符串
+getline(cin, str)
+
+保留小数点后两位，并四舍五入
+#include<cmath>
+x=round(x*100)/100
+#include <iomanip>
+cout<<fixed<<setprecision(2)<<x;
+
+字符串分割：
+vector<string> split(string s,string seprate){
+    vector<string> ret;
+    int seprate_len=seprate.length();
+    int start=0;
+    int index;
+    while((index = s.find(seprate,start))!=-1){
+        ret.push_back(s.substr(start,index-start));
+        start = index+seprate_len;
+    }
+    if(start<s.length())
+        ret.push_back(s.substr(start,s.length()-start));
+    return ret;
+}
+
+
+process.stdin.resume();
+process.stdin.setEncoding('utf-8');
+let input = '';
+process.stdin.on('data', (data) => {
+    input += data;
+});
+process.stdin.on('end', () => {
+    let inputArray = input.split('\n');
+    /**
+     * 待实现函数，在此函数中填入答题代码
+     * doFunc()
+     */
+    console.log(inputArray)
+    process.exit();
+});
+#include<limites.h>INT_MAX
